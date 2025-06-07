@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<script type='text/javascript' src='//pl26839830.profitableratecpm.com/69/30/27/693027c428633ead5f754a6640e8febd.js'></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aapke Liye Ek Surprise!</title>
+    <style>
+        /* --- पेज की बेसिक स्टाइलिंग --- */
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212; /* डार्क थीम */
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 95%;
+            width: 500px;
+        }
+
+        /* --- सरप्राइज़ बॉक्स की स्टाइलिंग --- */
+        #surprise-box {
+            cursor: pointer;
+            border: 3px dashed #ffc107; /* पीला डैश वाला बॉर्डर */
+            padding: 25px;
+            border-radius: 15px;
+            background-color: #1e1e1e;
+            transition: transform 0.2s ease;
+        }
+
+        #surprise-box:hover {
+            transform: scale(1.03); /* कर्सर ले जाने पर थोड़ा बड़ा होगा */
+            border-color: #25D366; /* व्हाट्सएप हरा रंग */
+        }
+        
+        #surprise-gif {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        #surprise-text {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #e0e0e0;
+        }
+
+        /* --- वीडियो कंटेनर की स्टाइलिंग --- */
+        #video-container {
+            display: none; /* शुरुआत में छिपा रहेगा */
+            width: 100%;
+        }
+
+        #my-video {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        /* --- शेयर बटन की स्टाइलिंग --- */
+        #share-button-wrapper {
+            margin-top: 25px;
+        }
+
+        .share-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #25D366; /* व्हाट्सएप का हरा रंग */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 50px; /* गोल बटन */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+            text-decoration: none; /* लिंक के अंडरलाइन को हटाने के लिए */
+        }
+
+        .share-button:hover {
+            background-color: #128C7E; /* गहरा हरा रंग */
+            transform: translateY(-3px);
+        }
+
+        .share-button svg {
+            margin-right: 10px; /* आइकॉन और टेक्स्ट के बीच जगह */
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- सरप्राइज़ वाला बॉक्स (शुरुआत में यह दिखेगा) -->
+        <div id="surprise-box">
+            <!-- यह आपकी GIF फाइल को दिखाएगा, जिसका नाम 'surprise.gif' होना चाहिए -->
+            <img id="surprise-gif" src="surprise.gif" alt="Surprise Box">
+
+            <p id="surprise-text">आपके लिए सरप्राइज़ है, अकेले ही देखना! बॉक्स पर क्लिक करो।</p>
+        </div>
+
+        <!-- वीडियो वाला कंटेनर (यह छिपा रहेगा) -->
+        <div id="video-container">
+            <!-- यह आपकी वीडियो फाइल को चलाएगा, जिसका नाम 'myvideo.mp4' होना चाहिए -->
+            <!-- controlsList="nodownload" से डाउनलोड बटन छिप जाएगा -->
+            <!-- oncontextmenu="return false;" से राइट-क्लिक डिसेबल हो जाएगा -->
+            <video id="my-video" controls controlsList="nodownload" oncontextmenu="return false;">
+                <source src="myvideo.mp4" type="video/mp4">
+                आपका ब्राउज़र वीडियो टैग को सपोर्ट नहीं करता।
+            </video>
+
+             <!-- शेयर बटन -->
+            <div id="share-button-wrapper">
+                 <a id="whatsapp-share-link" class="share-button" href="#" target="_blank">
+                    <!-- शेयर का आइकॉन -->
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-5h2V7h-2v8zm0 2h2v-2h-2v2z"/></svg>
+                    WhatsApp पर शेयर करें
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- जावास्क्रिप्ट का कोड ---
+
+        const surpriseBox = document.getElementById('surprise-box');
+        const videoContainer = document.getElementById('video-container');
+        const videoPlayer = document.getElementById('my-video');
+        const shareLink = document.getElementById('whatsapp-share-link');
+
+        // सरप्राइज़ बॉक्स पर क्लिक करने का फंक्शन
+        surpriseBox.addEventListener('click', () => {
+            surpriseBox.style.display = 'none'; // सरप्राइज़ बॉक्स को छिपा दो
+            videoContainer.style.display = 'block'; // वीडियो कंटेनर को दिखाओ
+            videoPlayer.play(); // वीडियो को चलाओ
+        });
+
+        // व्हाट्सएप शेयर लिंक बनाने का फंक्शन
+        // यह टेक्स्ट आप अपनी मर्जी से बदल सकते हैं
+        const shareText = encodeURIComponent('देखो, तुम्हारे लिए एक सरप्राइज़ है! इस पर क्लिक करो ->');
+        const pageUrl = encodeURIComponent('https://example.com'); // यहाँ आप अपनी वेबसाइट का लिंक डालें अगर है, वरना इसे ऐसे ही छोड़ दें
+
+        // व्हाट्सएप का डायरेक्ट शेयर लिंक
+        shareLink.href = `https://api.whatsapp.com/send?text=${shareText} ${pageUrl}`;
+
+        // नोट: यह कोड सीधे व्हाट्सएप पर शेयर करने के लिए है।
+        // अगर आपको सभी शेयर ऑप्शन चाहिए, तो आपको इस फाइल को किसी वेबसाइट पर अपलोड करना होगा
+        // और फिर navigator.share API का उपयोग करना होगा। लोकल फाइल के लिए यह सबसे अच्छा तरीका है।
+
+    </script>
+
+</body>
+</html>
